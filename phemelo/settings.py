@@ -25,7 +25,7 @@ SECRET_KEY = 'h69)7h$deosw58_@&ccmden1a!&ra*bz1!7m&)ggnkg1(gdqxo'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['10.113.201.236']
 
 
 # Application definition
@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'phemelo.apps.AppConfig'
 ]
 
 MIDDLEWARE = [
