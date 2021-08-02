@@ -1,3 +1,4 @@
+import os
 from django.db import models
 
 
@@ -18,6 +19,11 @@ class PatientReport(models.Model):
     scan_operator = models.CharField(max_length=50)
 
     scan_reason = models.CharField(max_length=50)
+
+    scan_copy = models.FileField(upload_to='scans/%Y/%m/%d/')
+
+    def filename(self):
+        return os.path.basename(self.file.name)
 
     class Meta:
         app_label = 'phemelo'
